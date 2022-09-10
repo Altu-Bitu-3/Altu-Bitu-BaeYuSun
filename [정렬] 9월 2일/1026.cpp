@@ -1,20 +1,20 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 int main() {
-	int n;
+	int n, num;
 	cin >> n;
 	//입력받을 배열 벡터로 선언
 	vector <int> a;
 	vector <int> b;
-	
-	//a배열 입력
+        //a배열 입력
 	for (int i = 0; i < n; i++) {
 		cin >> num;
 		a.push_back(num);
 	}
-	//b매열 입력
+	//b배열 입력
 	for (int i = 0; i < n; i++) {
 		cin >> num;
 		b.push_back(num);
