@@ -3,7 +3,6 @@
 
 using namespace std;
 bool switches [101];      //입력받을 스위치
-typedef pair <int,int> ci;
 
 //남학생인 경우 배수에 해당하는 스위치를 반전시키는 함수
 void maleStudent(int n, int num){
@@ -40,17 +39,18 @@ int main(){
         cin >> switches[i];
     }
 
+    int gender, input_num;
+
     //학생 입력 
     cin >> m;
-    vector <ci> student(m, {0,0});
 
     for(int i=0; i<m; i++){
-        cin >> student[i].first >> student[i].second;
+        cin >> gender >> input_num;
 
-        if(student[i].first == 1){  //남학생인 경우
-            maleStudent(n, student[i].second);
+        if(gender == 1){  //남학생인 경우
+            maleStudent(n, input_num);
         } else{  //여학생인 경우
-            femaleStudent(n, student[i].second);
+            femaleStudent(n, input_num);
         }
     }
 
